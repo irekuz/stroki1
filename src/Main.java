@@ -15,9 +15,21 @@ public class Main {
         //Задание №3
 
         String fullName3 = "Иванов Семён Семёнович";
-        fullName3 = fullName3.replace("ё", "е");
-        System.out.println("Данные ФИО сотрудника —" + fullName3);
-
+        //fullName3 = fullName3.replace("ё", "е");
+        //System.out.println("Данные ФИО сотрудника —" + fullName3);
+        String[] b = fullName3.split(" ");
+        for (int i = 0; i<b.length; i++) {
+            String new_string = "";
+            for (int j = 0; j < b[i].length(); j++) {
+                if(b[i].charAt(j) == 'ё') {
+                new_string+='ё';
+            } else
+            new_string+=b[i].charAt(j);
+        }
+        b[i] = new_string;
+        System.out.println(new_string);
+            }
+        }
 
 
 
@@ -38,4 +50,3 @@ public class Main {
 
 
     }
-}
